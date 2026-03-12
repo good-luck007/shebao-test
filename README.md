@@ -9,6 +9,45 @@
 - **数据库/后端**: Supabase
 - **Excel 解析**: xlsx (SheetJS)
 
+## 部署到 Vercel
+
+### 方式 1：一键部署（推荐）
+
+1. 访问 [Vercel New Project](https://vercel.com/new)
+2. 点击 **"Import Git Repository"**
+3. 选择你的 GitHub 仓库 `good-luck007/shebao-test`
+4. 点击 **"Import"**
+
+### 方式 2：使用 Vercel CLI
+
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 登录 Vercel
+vercel login
+
+# 部署
+vercel
+```
+
+### 配置环境变量
+
+在 Vercel 项目设置中添加以下环境变量：
+
+| 变量名 | 值 |
+|--------|-----|
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://xkvwcvxjzkmxtmxuvmej.supabase.co` |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 你的 Supabase Anon Key |
+
+**设置步骤：**
+1. 进入 Vercel 项目 Dashboard
+2. 点击 **"Settings"** → **"Environment Variables"**
+3. 添加上述两个变量
+4. 点击 **"Redeploy"** 重新部署
+
+---
+
 ## 快速开始
 
 ### 1. 环境配置
