@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     // 2. 按员工姓名分组，计算年度月平均工资
     const employeeSalaries: Record<string, number[]> = {};
-    salariesData.forEach((row) => {
+    salariesData.forEach((row: any) => {
       if (!employeeSalaries[row.employee_name]) {
         employeeSalaries[row.employee_name] = [];
       }
